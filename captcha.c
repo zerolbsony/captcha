@@ -37,8 +37,8 @@ PHP_FUNCTION(generate_captcha)
 			j = rand() % Z_STRLEN(dictpath);
 			memcpy(s2, s1+j, 1);
 			php_printf(s2);
+			memset(s2, 0, sizeof(s2));
 		}
-		memset(s2, 0, sizeof(s2));
 	 }
 }
 
