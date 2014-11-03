@@ -12,18 +12,20 @@ PHP_FUNCTION(generate_captcha)
      char *dictdata;
      zval data;
      int i;
+	 char *s1;
+     int amt;
      if(0 == zend_get_constant("CAPTCHA_DICTPATH", 16, &dictpath TSRMLS_CC)){
-		char *s1 = '0';
+		s1 = '0';
      }else{
         if(Z_TYPE(dictpath) == IS_STRING){
-			char *s1 = Z_STRVAL(dictpath);
+			s1 = Z_STRVAL(dictpath);
 		}
      }
      if(0 == zend_get_constant("CAPTCHA_AMOUNT", 14, &amount TSRMLS_CC)){
-		int amt = 5;
+		amt = 5;
      }else{
         if(Z_TYPE(amount) == IS_LONG){
-			int amt = Z_LVAL(amount);
+			amt = Z_LVAL(amount);
 		}
      }
    
