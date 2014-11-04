@@ -35,6 +35,7 @@ PHP_FUNCTION(generate_captcha)
 		char s2[10];
 		int j;
 		memset(s2, 0, sizeof(s2));
+		srand((int)time(0));
 		for(i=0; i<amt; i++){
 			j = rand() % Z_STRLEN(dictpath);
 			memcpy(s2, s1+j, 1);
