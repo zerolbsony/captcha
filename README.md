@@ -12,6 +12,7 @@ shell>./configure --with-php-config=/usr/local/php/bin/php-config
 ./configure --enable-captcha-zts --with-php-config=/usr/local/php/bin/php-config
 
 shell>make && make install
+shell>libtool --finish 当前目录/modules
 
 配置php.ini
 
