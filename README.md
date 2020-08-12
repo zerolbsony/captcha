@@ -21,7 +21,7 @@ shell>libtool --finish 当前目录/modules
 extension=captcha.so
 
 下面是php代码示例：
-
+```
 <?php
 
 //定义要生成的验证码个数
@@ -35,3 +35,4 @@ define('CAPTCHA_DICTPATH', 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
 echo generate_captcha();
 
 ?>
+```
